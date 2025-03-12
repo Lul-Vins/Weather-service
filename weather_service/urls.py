@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from clima.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('register/',RegisterUserView.as_view(), name= 'registro_de_usuario' ) 
 ]
